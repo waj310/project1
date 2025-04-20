@@ -27,6 +27,6 @@ jobs:
           image: araheemcis/numberadd
           #tags: v1, latest
           registry: docker.io
-          dockerfile: Dockerfile.ci
+          #dockerfile: Dockerfile.ci
           username: ${{ vars.DOCKERHUB_USERNAME}}
           password: ${{ secrets.DOCKER_TOKEN }}
