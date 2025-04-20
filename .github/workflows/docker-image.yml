@@ -30,5 +30,3 @@ jobs:
           dockerfile: Dockerfile.ci
           username: ${{ vars.DOCKERHUB_USERNAME}}
           password: ${{ secrets.DOCKER_TOKEN }}
-      -
-   
