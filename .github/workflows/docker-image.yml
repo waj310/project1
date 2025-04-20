@@ -20,11 +20,15 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v6
+
+      - uses: mr-smithers-excellent/docker-build-push@v3
+        name: Build & push Docker image
         with:
-          context: .
-          push: true
-          tags: |
-              "${{ github.repository }}"
+          image: araheemcis/numberadd
+          #tags: v1, latest
+          registry: docker.io
+          dockerfile: Dockerfile.ci
+          username: ${{ vars.DOCKERHUB_USERNAME}}
+          password: ${{ secrets.DOCKER_TOKEN }}
+      -
+   
