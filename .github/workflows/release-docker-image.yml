@@ -34,7 +34,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v3
         name: Build & push Docker image
         with:
-          image: araheemcis/numberadd
+          image: araheemcis/project1
           tags: |
                ${{ steps.tag_version.outputs.new_tag }}           
           
