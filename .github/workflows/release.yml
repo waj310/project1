@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches:
-      - master
-      - 'releases/**'
+    #branches:
+      #- master
+    tags: [ 'releases/**']
 jobs:
   docker:
     runs-on: ubuntu-latest
