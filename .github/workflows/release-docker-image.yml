@@ -27,9 +27,10 @@ jobs:
         name: Build & push Docker image
         with:
           image: araheemcis/numberadd
-          tags: |
-               ${{ vars.DOCKERHUB_USERNAME }}:latest
-               ${{ vars.DOCKERHUB_USERNAME }}:${{ env.TAG }}
+        #  tags: |
+         #      ${{ vars.DOCKERHUB_USERNAME }}:latest
+         #      ${{ vars.DOCKERHUB_USERNAME }}:${{ env.TAG }}
+          tag_names: true
           registry: docker.io
           #dockerfile: Dockerfile.ci
           username: ${{ vars.DOCKERHUB_USERNAME}}
