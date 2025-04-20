@@ -21,7 +21,7 @@ jobs:
       -
         name: Extract version and set it to tag
         run: |
-             echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+             echo "TAG=${GITHUB_REF:10}" >> $GITHUB_ENV
 
       - uses: mr-smithers-excellent/docker-build-push@v3
         name: Build & push Docker image
