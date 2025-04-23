@@ -5,7 +5,7 @@ on:
        - f1.1
     tags: 
         - "f*"
-  workflow_dispatch:
+  #workflow_dispatch:
 jobs:
  
   build-and-push-v1-1-with-tags:
