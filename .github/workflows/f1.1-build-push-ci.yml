@@ -1,10 +1,10 @@
-name: "Docker Publish for v1.1 release"
+name: "Docker Publish for f1.1 "
 on:
   push:
     branches:
-       - v1.1
+       - f1.1
     tags: 
-        - "v*"
+        - "f*"
   workflow_dispatch:
 jobs:
  
