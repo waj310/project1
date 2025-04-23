@@ -3,8 +3,8 @@ on:
   push:
     branches:
        - f1.1
-    tags: 
-        - "f*"
+ #   tags: 
+  #      - "f*"
   #workflow_dispatch:
 jobs:
  
