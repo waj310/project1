@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
  
-  build-and-push-image with tags:
+  build-and-push-image-with-tags:
     runs-on: ubuntu-latest
 
     steps:
