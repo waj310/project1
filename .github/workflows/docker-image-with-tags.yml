@@ -1,5 +1,4 @@
-name: Docker Publish with tags
-
+name: "Docker Publish with tags"
 on:
   push:
     tags: 
