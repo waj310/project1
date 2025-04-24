@@ -6,7 +6,7 @@ on:
   #workflow_dispatch:
 jobs:
  
-  build-and-push-with-tags-v1.3:
+  build-and-push-with-tags-v13:
     runs-on: ubuntu-latest
 
     steps:
