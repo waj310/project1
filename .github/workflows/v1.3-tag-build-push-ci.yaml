@@ -1,4 +1,4 @@
-name: "Docker Publish for tags v1.3 "
+name: "Docker Publish for tags "
 on:
   push:
     tags: 
@@ -6,7 +6,7 @@ on:
   #workflow_dispatch:
 jobs:
  
-  build-and-push-with-tags-v13:
+  build-and-push-with-tags:
     runs-on: ubuntu-latest
 
     steps:
