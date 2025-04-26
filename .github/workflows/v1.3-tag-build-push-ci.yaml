@@ -29,10 +29,16 @@ jobs:
          push: true
          tags: |
            "${{ github.repository }}:${{ github.ref_name }}"
+
+    - name: Check out my other private repo
+      uses: actions/checkout@master
+      with:
+          repository: araheemcis/k8-repo
+          token: ${{ GIT_HUB_TOKEN_K8-REPO }}
+
            
     - name: Update values.yaml
       run: |
-          git clone git@github.com:araheemcis/k8-repo.git
           cd helm/project1-chart
           sed -i 's|tag:.*|tag: '${{ github.ref_name }}'|' values.yaml 
           git config --global user.name 'Abdul Raheem'
