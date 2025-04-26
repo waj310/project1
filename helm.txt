@@ -1,0 +1,11 @@
+helm
+
+helm create helm-chart-name
+
+To check the systax of the chart
+helm lint helm-chart-name
+
+
+helm template release-name helm-chart-name ( This will print out the Kubernetes objects with the values of variables from Values.yaml files)
+
+helm template release=name helm-chart-name --debug
