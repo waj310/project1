@@ -55,5 +55,5 @@ jobs:
         git config --global user.name 'Abdul Raheem'
         git config --global user.email 'araheemcis@gmail.com'
         git commit -am "updating image tag"
-        git push HEAD:master
+        git push origin master
 
