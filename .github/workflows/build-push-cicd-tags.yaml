@@ -30,21 +30,30 @@ jobs:
          tags: |
            "${{ github.repository }}:${{ github.ref_name }}"
 
-    - name: "Checkout again"
-      uses: actions/checkout@v3
-      with:
-        ref: ${{ github.repository }}
+#updating the helm manifests files
 
 
-           
-    - name: Update values.yaml
+  update:
+    name: Update Helm Manifests
+    runs-on: ubuntu-latest
+    needs: build-and-push-with-tags
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Update Image Tag Values in values.yaml
       run: |
-          ls
-          cd helm/project1-chart
-          sed -i 's|tag:.*|tag: '${{ github.ref_name }}'|' values.yaml 
-          git config --global user.name 'Abdul Raheem'
-          git config --global user.email 'araheemcis@gmail.com'
-          git add values.yaml
-          git commit -m "Update values.yaml"
-          git push
+        chart_dir="helm/project1-chart"
+        new_image_tag=${{ github.ref_name }}
+
+        # Update the values.yaml file with the new image tag
+        sed -i "s/^  tag: .*/  tag: $new_image_tag/" "$chart_dir/values.yaml"
+    
+    - name: Commit the changes made
+      run: | 
+        git config --global user.name 'Abdul Raheem'
+        git config --global user.email 'araheemcis@gmail.com'
+        git commit -am "updating image tag"
+        git push
 
