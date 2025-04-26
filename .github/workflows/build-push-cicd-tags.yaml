@@ -42,6 +42,10 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
 
+    - name: "Get the current branch"
+      run: |
+        git branch -r
+
     - name: Update Image Tag Values in values.yaml
       run: |
         chart_dir="helm/project1-chart"
