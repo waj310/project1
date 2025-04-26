@@ -56,6 +56,7 @@ jobs:
     
     - name: Commit the changes made
       run: | 
+        git config --global init.defaultBranch master
         git config --global user.name 'Abdul Raheem'
         git config --global user.email 'araheemcis@gmail.com'
         git commit -am "updating image tag"
