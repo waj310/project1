@@ -41,8 +41,6 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v3
-      with:
-       ref: ${{ github.repository }}
 
     - name: Update Image Tag Values in values.yaml
       run: |
@@ -57,5 +55,5 @@ jobs:
         git config --global user.name 'Abdul Raheem'
         git config --global user.email 'araheemcis@gmail.com'
         git commit -am "updating image tag"
-        git push
+        git push HEAD:master
 
