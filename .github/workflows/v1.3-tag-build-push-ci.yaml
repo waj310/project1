@@ -38,6 +38,7 @@ jobs:
            
     - name: Update values.yaml
       run: |
+          ls
           cd helm/project1-chart
           sed -i 's|tag:.*|tag: '${{ github.ref_name }}'|' values.yaml 
           git config --global user.name 'Abdul Raheem'
