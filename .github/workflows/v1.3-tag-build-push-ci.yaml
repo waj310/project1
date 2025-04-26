@@ -30,6 +30,11 @@ jobs:
          tags: |
            "${{ github.repository }}:${{ github.ref_name }}"
 
+    - name: "Checkout again"
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.repository }}
+
 
            
     - name: Update values.yaml
