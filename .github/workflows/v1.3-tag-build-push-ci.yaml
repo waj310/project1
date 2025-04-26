@@ -34,7 +34,6 @@ jobs:
       uses: actions/checkout@master
       with:
           repository: araheemcis/k8-repo
-#          token: ${{ GIT_HUB_TOKEN_K8-REPO }}
 
            
     - name: Update values.yaml
