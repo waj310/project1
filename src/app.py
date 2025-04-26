@@ -10,10 +10,10 @@ def index():
  #    num2 = int(request.form['num2'])
      number1 = request.args.get("number1", "")
      number2 = request.args.get("number2", "")
-#     number3 = request.args.get("number3", "")
+     number3 = request.args.get("number3", "")
  
-#     result1 = addnumber(number1,number2)
-     result  = addnumber(number1,number2)
+     result1 = addnumber(number1,number2)
+     result  = addnumber(result1,number3)
     except ValueError:
             result = "Invalid input. Please enter numbers only."
 
@@ -24,8 +24,8 @@ def index():
                 <input type="submit" value="number1">
                 Enter the number2: <input type="text" name="number2">
                 <input type="submit" value="number2">
-             #   Enter the number3: <input type="text" name="number3">
-              #  <input type="submit" value="number3">
+                Enter the number3: <input type="text" name="number3">
+               <input type="submit" value="number3">
               </form>"""
           + result
           
