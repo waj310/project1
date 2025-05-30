@@ -8,6 +8,7 @@ def index():
     try:
 #     num1 = int(request.form['num1'])
  #    num2 = int(request.form['num2'])
+     
      number1 = request.args.get("number1", "")
      number2 = request.args.get("number2", "")
  
@@ -22,6 +23,8 @@ def index():
                 <input type="submit" value="number1">
                 Enter the number2: <input type="text" name="number2">
                 <input type="submit" value="number2">
+		Enter the number3: <input type="text" name="number2">
+		<input type="submit" value="number3">
               </form>"""
           + result
           
