@@ -1,0 +1,36 @@
+helm
+
+helm create helm-chart-name
+
+To check the systax of the chart
+helm lint helm-chart-name
+
+
+helm template release-name helm-chart-name ( This will print out the Kubernetes objects with the values of variables from Values.yaml files)
+
+helm template release=name helm-chart-name --debug
+
+
+
+[200~helm create helm-chart-name
+
+To check the systax of the chart
+helm lint helm-chart-name
+
+
+helm template release-name helm-chart-name ( This will print out the Kubernetes objects with the values of variables from Values.yaml files)
+
+helm template release=name helm-chart-name --debug
+
+
+====================
+external dynamic NFS_provisioner
+
+https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner?tab=readme-ov-file
+
+
+$ helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+$ helm install nfs-subdir-MySQL  nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
+    --set nfs.server=192.168.1.172 \
+        --set nfs.path=/nfs/k8s/MySQL
+
