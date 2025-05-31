@@ -23,6 +23,8 @@ def index():
                 <input type="submit" value="number1">
                 Enter the number2: <input type="text" name="number2">
                 <input type="submit" value="number2">
+		 Enter the number3: <input type="text" name="number3">
+		 <input type="submit" value="number3">
               </form>"""
           + result
           
