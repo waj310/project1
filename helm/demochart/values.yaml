@@ -12,9 +12,10 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
-  targetPort: 5001
-  nodePort: 30884  ## changed because older app ran on 30883
-  namespace: demons
+targetPort: 5001
+nodePort: 30884  ## changed because older app ran on 30883
+namespace: demons
+port: 5001
 
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 imagePullSecrets: []
